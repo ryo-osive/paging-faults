@@ -17,7 +17,10 @@ def main():
     algorithm = ''
     while algorithm not in ('OPT', 'LRU', 'FIFO'):
         algorithm = input("Enter algorithm (OPT/LRU/FIFO): ")
+
     faults = Faults(algorithm, num_pages)
+
+    print("Randomly Generated Page References: ", faults.pages)
 
     print("Number of page faults: ", faults.faults)
 
